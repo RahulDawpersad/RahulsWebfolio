@@ -407,7 +407,25 @@ video{
   
   /* End of Preloader */
 
-  @media(max-width:490px){
+.home-wrapper{
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* End of Preloader */
+  .fa-solid{
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-left: 4em;
+  }
+
+  .icon-link{
+    text-decoration: none;
+    color: #039267;
+  }
+
+
+  @media(max-width: 780px){
     body{
       overflow-y: scroll;
     }
@@ -434,5 +452,9 @@ video{
     margin: 1.7em;
     width: 300px;
   }
-   
+   .fa-solid{
+    font-size: 1.2em;
+    margin-top: 2em;
+    margin-left: 2.2em;
+  }
   }
