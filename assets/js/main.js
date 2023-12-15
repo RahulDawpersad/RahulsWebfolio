@@ -1,10 +1,3 @@
-/**
-* Template Name: DevFolio
-* Updated: Nov 17 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -182,23 +175,6 @@
     selector: '.portfolio-lightbox'
   });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
 
   /**
    * Portfolio details slider
@@ -216,16 +192,6 @@
       clickable: true
     }
   });
-
-  /**
-   * Preloader
-   */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
 
   /**
    * Initiate Pure Counter 
