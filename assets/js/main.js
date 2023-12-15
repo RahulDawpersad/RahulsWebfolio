@@ -239,6 +239,47 @@ function blog(){
   window.location.href = 'https://www.rahuldawpersad.com/blog.html';
 }
 
+// Tooltip Functionality
+// Get the icon and tooltip elements
+var icon = document.getElementById("icon-info");
+var tooltip = document.getElementById("tooltip-info");
+var iconTwo = document.getElementById('icon-two');
+var projectTwo = document.getElementById('project-span');
+var iconThree = document.getElementById('icon-three');
+var phpSpan = document.getElementById('php-span');
+
+icon.addEventListener('click', function () {
+  tooltip.style.display = (tooltip.style.display === "flex") ? "none" : "flex";
+  tooltip.innerHTML = `<div class="alert alert-primary" role="alert">
+ My Exam Mark
+</div>
+`;
+
+})
+
+iconTwo.addEventListener('click', function () {
+  projectTwo.style.display = (projectTwo.style.display === "flex") ? "none" : "flex";
+  projectTwo.innerHTML = `
+  <div class="alert alert-primary alert-two" role="alert">
+  I understand the basic concepts of React, such as components, state, and props, and have completed simple projects.
+  </div>
+`;
+
+})
+
+iconThree.addEventListener('click', function () {
+  phpSpan.style.display = (phpSpan.style.display === "flex") ? "none" : "flex";
+  phpSpan.innerHTML = `
+  <div class="alert alert-primary alert-three" role="alert">
+  I am proficient in integrating HTML with PHP and MySQL to create dynamic web applications. 
+  Through hands-on experience, I have successfully connected front-end interfaces with back-end functionality, and i'm
+  Eager to expand my skills and contribute to innovative web projects
+  </div>
+`;
+
+})
+
+
 // Preloader Functionality
 setTimeout(function(){
   $('.wrapper').fadeOut();
