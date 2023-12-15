@@ -360,6 +360,64 @@ body {
 
 /* End of Preloader */
 
+/* Tooltip */
+.skill-wrapper{
+  display: flex;
+  gap: 6px;
+}
+
+.fa-circle-exclamation{
+  cursor: pointer;
+  margin: 0.25em;
+}
+
+.tooltip-icon{
+  display: flex;
+  margin-left: 0.4em;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #000000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tooltip-span{
+  padding: 0.1em;
+}
+
+.react-wrapper{
+  display: flex;
+}
+
+.project-icon{
+  margin-left: 0.4em;
+  margin-top: -0.1em;
+}
+
+.percentage{
+  margin-left: 0.5em;
+}
+
+.php-percent{
+  margin-left: 0.5em;
+}
+
+@media(max-width:780px){
+  .alert-two{
+    width: 290px;
+    margin-left: -7em;
+  }
+  .alert-three{
+    width: 300px;
+    margin-left: -3.5em;
+  }
+}
+
+
 h1,
 h2,
 h3,
