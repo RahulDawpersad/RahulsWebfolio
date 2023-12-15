@@ -1,3 +1,8 @@
+// Preloader Functionality
+setTimeout(function(){
+  $('.wrapper').fadeOut();
+}, 2500);  
+
 (function() {
   "use strict";
 
@@ -246,7 +251,3 @@ iconThree.addEventListener('click', function () {
 })
 
 
-// Preloader Functionality
-setTimeout(function(){
-  $('.wrapper').fadeOut();
-}, 2500);  
