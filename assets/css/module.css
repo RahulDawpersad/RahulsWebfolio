@@ -406,3 +406,33 @@ video{
   }
   
   /* End of Preloader */
+
+  @media(max-width:490px){
+    body{
+      overflow-y: scroll;
+    }
+    .video-container{
+      display: grid;
+      place-items: center;    
+   }
+   video{
+    width: 300px;
+    height: 300px;
+}
+   .founder-content {
+   display: grid;
+   place-items: center;
+  }
+  .founder-content h1{
+    font-size: 1.6em;
+  }
+  
+  .paragraphs {
+    display: grid;
+    place-items: center;
+    gap: 20px; /* Add some space between paragraphs */
+    margin: 1.7em;
+    width: 300px;
+  }
+   
+  }
