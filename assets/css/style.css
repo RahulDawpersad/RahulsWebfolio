@@ -360,6 +360,20 @@ body {
 
 /* End of Preloader */
 
+/* On-Scroll Animation */
+.hidden{
+  opacity: 0; /*Making the elements visible*/
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.show{
+  opacity: 1; /*will bring the opacity back to 1 */
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 /* Tooltip */
 .skill-wrapper{
   display: flex;
