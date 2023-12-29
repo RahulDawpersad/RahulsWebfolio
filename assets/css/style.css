@@ -7,6 +7,24 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Share Button Styling */
+.btnShare{
+  border: none;
+  background: none;
+  font-size: 2em;
+  margin-left: 1.2em;
+  cursor: pointer;
+}
+
+.btnShare  .fa-retweet{
+  color: #ffffff;
+  transition: all .2s ease;
+}
+  
+.fa-retweet:hover{
+  color: #0062d3;
+}
+
 
 /*------/ Prelaoder /------*/
 .wrapper{
@@ -1144,6 +1162,27 @@ span{
 
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
+}
+
+@media(max-width: 780px){
+   /* Share Button Styling */
+   .btnShare{
+    border: none;
+    background: none;
+    font-size: 2em;
+    margin-left: 0.45em;
+    cursor: pointer;
+  }
+  
+  .btnShare .fa-retweet{
+    color: #000000;
+    transition: all .2s ease;
+  }
+    
+  .fa-retweet:hover{
+    color: #0062d3;
+  }
+
 }
 
 /*--------------------------------------------------------------
