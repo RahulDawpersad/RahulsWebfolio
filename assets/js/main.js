@@ -267,3 +267,40 @@ const hiddenElements = document.querySelectorAll('.hidden');
 
 //tell it what to observe
 hiddenElements.forEach((el)=> observer.observe(el)); //Tell the observer to observe
+
+
+
+// Share Functionality Using the Web Share API
+// Check if the Web Share API is supported
+if (navigator.share) {
+  // Get the share button element
+  var shareButton = document.getElementById("shareButton");
+
+  // Add click event listener to the share button
+  shareButton.addEventListener("click", function () {
+    // Call the Web Share API
+    navigator
+      .share({
+        title: "www.webfolio.co.za",
+        text: "Explore my creative world at www.WebFolio.co.za – your go-to destination for a captivating online portfolio or presence. Showcase my work and journey with me in the realm of design. #WebFolio #DesignX #CreativeJourney",
+        url: "https://www.webfolio.co.za",
+      })
+      .then(() => console.log("Shared successfully"))
+      .catch((error) => console.error("Error sharing:", error));
+  });
+} else {
+  // Web Share API is not supported, provide fallback or inform the user
+  alert(
+    "Web Share API is not supported in this browser or on non-HTTPS websites."
+  );
+}
+
+
+
+
+
+
+
+
+
+
