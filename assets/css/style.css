@@ -483,6 +483,7 @@ a:hover {
 }
 
 .download-link{
+  font-size: 0.9em;
   color: #004391;
   font-weight: bold;
   transition: .3s ease-in-out;
