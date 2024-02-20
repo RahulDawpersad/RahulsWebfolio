@@ -378,6 +378,75 @@ body {
 
 /* End of Preloader */
 
+/* Contact Section */
+/* Form Container  */
+ .contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.contact-text{
+  margin-left: 1.6em;
+}
+
+.contact-form {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.contact-form input{
+  height: 2.7em;
+}
+
+.contact-form textarea{
+  resize: none;
+}
+
+.contact-form #btnSubmit{
+  margin: 1.5em 0;
+  width: 18em;
+  height: 2.8em;
+}
+
+.contact-form #btnSubmit .fa-regular{
+  margin-left: 1em;
+}
+
+.valid{
+  color: green;
+}
+
+.error{
+  color: red;
+}
+
+.alert{
+  margin: 1em 0;
+}
+
+/* Media query for tablets and phones */
+@media (max-width: 768px) {
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .contact-content,
+  .contact-form {
+    padding: 0;
+  }
+}
+
+/* End of Form Container */
+/* End Of Contact Section */
+
 /* On-Scroll Animation */
 .hidden{
   opacity: 0; /*Making the elements visible*/
