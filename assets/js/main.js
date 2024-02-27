@@ -1,3 +1,9 @@
+// Preloader Functionality
+setTimeout(function(){
+  $('.wrapper').fadeOut();
+}, 2500);  
+
+
 var emailInput = document.getElementById('email');
 var emailError = document.getElementById('email-error');
 var btnSend = document.getElementById('btnSubmit');
@@ -33,10 +39,6 @@ function submitForm() {
   }, 1000); 
 }
 
-// Preloader Functionality
-setTimeout(function(){
-  $('.wrapper').fadeOut();
-}, 2500);  
 
 (function() {
   "use strict";
