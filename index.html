@@ -27,6 +27,13 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
+  <!-- Link to Google Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />   
+  
+  <!-- Link to Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
@@ -777,7 +784,7 @@
     <!-- End Portfolio Section -->
 
     <!-- Contact Section -->
- <section id="contact" class="contact-mf sect-pt4 route">
+<!--  <section id="contact" class="contact-mf sect-pt4 route">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -817,8 +824,55 @@
       </div>
     </div>
   </div>
+</section> -->
+<section id="contact" class="contact-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box-shadow-full">
+          <div class="contact-flex-container">
+            <div class="contact-text">
+              <div class="title-box-2 pt-4 pt-md-0">
+                <h5 class="title-left">Powered By <span>FormSpree</span></h5>
+              </div>
+              <div class="more-info hidden">
+                <p class="lead">Developed By Rahul Dawpersad</p>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form action="https://formspree.io/f/xeqygllk" method="post" role="form" class="form" id="contactForm" autocomplete="off">
+        
+                <div class="form-group">
+                  <input type="text" name="first name" class="form-control" id="name" placeholder="First Name(s)"  />
+                  <span id="nameError" style="color: red"></span>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" name="surname" class="form-control" id="surname" placeholder="Surname"  />
+                  <span id="surnameError" style="color: red"></span>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
+                  <span id="emailError" style="color: red"></span>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message" ></textarea>
+                  <span id="messageError" style="color: red"></span>
+                </div>
+                <div class="form-group mt-3">
+                  <div class="g-recaptcha" data-sitekey="6LeUIIcpAAAAAPJSiddl-lU9cgRB-vCJWzU_peXD"></div>
+                  <span id="recaptchaError" style="color: red"></span>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary" id="btnSubmit">Send Message <i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <!-- End of Contact Section -->
 
@@ -870,9 +924,87 @@
     </section>
 
 
-
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
+
+    <script>
+          function validateForm() {
+  var firstName = document.getElementById("name").value.trim();
+  var surname = document.getElementById("surname").value.trim();
+  var email = document.getElementById("email").value.trim();
+  var message = document.getElementById("message").value.trim();
+  var recaptchaResponse = grecaptcha.getResponse();
+  var isValid = true;
+
+  if (firstName === "") {
+      document.getElementById("nameError").innerHTML =
+          `<div class="error-container">
+           <span class="material-symbols-outlined">error</span> 
+           Please enter your first name.
+           </div>`;
+            
+      isValid = false;
+  } else {
+      document.getElementById("nameError").textContent = "";
+  }
+
+  if (surname === "") {
+      document.getElementById("surnameError").innerHTML =
+          `<div class="error-container">
+           <span class="material-symbols-outlined">error</span> 
+           Please enter your surname.
+           </div>`;
+            
+      isValid = false;
+  } else {
+      document.getElementById("surnameError").textContent = "";
+  }
+
+  if (email === "") {
+      document.getElementById("emailError").innerHTML =
+          `<div class="error-container">
+           <span class="material-symbols-outlined">error</span> 
+           Please enter your Email Address.
+           </div>`;
+            
+      isValid = false;
+  } else {
+      document.getElementById("emailError").textContent = "";
+  }
+
+  if (message === "") {
+      document.getElementById("messageError").innerHTML =
+          `<div class="error-container">
+           <span class="material-symbols-outlined">error</span> 
+           Please enter your Message.
+           </div>`;
+            
+      isValid = false;
+  } else {
+      document.getElementById("messageError").textContent = "";
+  }
+
+  if (recaptchaResponse === "") {
+      document.getElementById("recaptchaError").innerHTML =
+          `<div class="error-container">
+           <span class="material-symbols-outlined">error</span> 
+           Please complete the reCAPTCHA.
+           </div>`;
+            
+      isValid = false;
+  } else {
+      document.getElementById("recaptchaError").textContent = "";
+  }
+
+  return isValid;
+}
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  if (!validateForm()) {
+      event.preventDefault();
+  }
+});
+        </script>
 
     <!-- Vendor JS Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
