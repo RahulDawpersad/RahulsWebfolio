@@ -430,6 +430,19 @@ body {
   margin: 1em 0;
 }
 
+.error-container{
+  display: flex;
+  margin: 0.9em 0;
+}
+
+.title-box-2 span{
+  color: rgb(233, 22, 64);
+}
+
+.more-info p{
+  color: #aaaaaa;
+}
+
 /* Media query for tablets and phones */
 @media (max-width: 768px) {
   .contact-container {
