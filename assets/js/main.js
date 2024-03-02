@@ -4,32 +4,32 @@ setTimeout(function(){
 }, 2500);  
 
 
-var emailInput = document.getElementById('email');
-var emailError = document.getElementById('email-error');
-var btnSend = document.getElementById('btnSubmit');
+// var emailInput = document.getElementById('email');
+// var emailError = document.getElementById('email-error');
+// var btnSend = document.getElementById('btnSubmit');
 
-emailInput.addEventListener('input', validateEmail);
+// emailInput.addEventListener('input', validateEmail);
 
-function validateEmail() {
-  let email = emailInput.value;
-  let emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.]+\.(com|org|net|info|biz|us|uk|ca|au|de)$/i;
+// function validateEmail() {
+//   let email = emailInput.value;
+//   let emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.]+\.(com|org|net|info|biz|us|uk|ca|au|de)$/i;
 
-  if (!email.match(emailPattern)) {
-    emailError.innerHTML = `<div class="alert alert-danger form-group" role="alert">
-    Invalid Email Address!
-  </div>`;
-    emailError.classList.remove('valid');
-    emailError.classList.add('error');
-    btnSend.disabled = true;
-  } else {
-    emailError.innerHTML = `<div class="alert alert-success" role="alert">
-    Valid Email Address
-  </div>`;
-    emailError.classList.remove('error');
-    emailError.classList.add('valid');
-    btnSend.disabled = false;
-  }
-}
+//   if (!email.match(emailPattern)) {
+//     emailError.innerHTML = `<div class="alert alert-danger form-group" role="alert">
+//     Invalid Email Address!
+//   </div>`;
+//     emailError.classList.remove('valid');
+//     emailError.classList.add('error');
+//     btnSend.disabled = true;
+//   } else {
+//     emailError.innerHTML = `<div class="alert alert-success" role="alert">
+//     Valid Email Address
+//   </div>`;
+//     emailError.classList.remove('error');
+//     emailError.classList.add('valid');
+//     btnSend.disabled = false;
+//   }
+// }
 
 // Form Submission
 function submitForm() {
